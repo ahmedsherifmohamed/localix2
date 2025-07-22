@@ -19,7 +19,7 @@
             </div>
             <div class="ident">
                 <h3>Lumora</h3>
-                <p>Perfumes Brand</p>
+                <p>cokkies shop</p>
             </div>
         </div>
         <ul>
@@ -28,14 +28,98 @@
         </ul>
     </nav>
     <section class="hero">
-        <div class="insights">
-            <div class="profile">
-                <div class="pic">
-                    <i class="fa-solid fa-user"></i>
+                <div class="box">
+                    <div class="tabs">
+                        <button class="productsbtn">Products</button>
+                        <button class="insightsbtn">Insights</button>
+                        <button class="postsbtn">Posts</button>
+                    </div>
+                    <div class="content-box">
+                        <div class="content products-box">
+                            <div class="head">
+                                <div class="text">
+                                    <h1>Your Products</h1>
+                                    <p>Manage your prodcuts</p>
+                                </div>
+                                <button>+ Add Product</button>
+                            </div>
+                            <div class="products">
+                                <div class="product">
+                                    <h1>Cupcake</h1>
+                                    <p>A cupcake that is made of creamy white chocolate and strawbarry</p>
+                                    <h3>$5.00</h3>
+                                    <img src="https://sugargeekshow.com/wp-content/uploads/2022/08/vanilla_cupcake_featured_blog.jpg" alt="" width="250">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content insights-box">
+                            <div class="head">
+                                <h1>See Your Insights</h1>
+                                <p>See your progress</p>
+                            </div>
+                            <div class="cards">
+                                <div class="card">
+                                    <h3>Active Products</h3>
+                                    <h1>4</h1>
+                                    <p>0 inacive products</p>
+                                </div>
+                                <div class="card">
+                                    <h3>Total Products</h3>
+                                    <h1>4</h1>
+                                    <p>All products in catalog</p>
+                                </div>
+                                <div class="card">
+                                    <h3>Catalog value</h3>
+                                    <h1>$8.00</h1>
+                                    <p>Total product value</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content posts-box">
+                            <div class="head">
+                                <div class="text">
+                                    <h1>See your Posts</h1>
+                                    <p>Manage your posts</p>
+                                </div>
+                                <button>+ Add Post</button>
+                            </div>
+                            <div class="posts">
+                                <div class="post">
+                                    <div class="pic">
+                                        <i class="fa-solid fa-user"></i>
+                                    </div>
+                                    <p>New cupcake shop</p>
+                                    <img src="https://sugargeekshow.com/wp-content/uploads/2022/08/vanilla_cupcake_featured_blog.jpg" alt="" width="250">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <h1>Welcome to your Dashboard</h1>
-            </div>
-        </div>
     </section>
+    <script>
+        const postsbtn=document.querySelector(".postsbtn")
+        const productsbtn=document.querySelector(".productsbtn")
+        const insightsbtn=document.querySelector(".insightsbtn")
+
+        const posts=document.querySelector(".posts-box")
+        const insights=document.querySelector(".insights-box")
+        const products=document.querySelector(".products-box")
+        
+        postsbtn.addEventListener("click",()=>{
+            insights.style.display="none";
+            products.style.display="none";
+            posts.style.display="block";
+        })
+        insightsbtn.addEventListener("click",()=>{
+            insights.style.display="block";
+            products.style.display="none";
+            posts.style.display="none";
+        })
+        productsbtn.addEventListener("click",()=>{
+            insights.style.display="none";
+            products.style.display="block";
+            posts.style.display="none";
+        })
+    </script>
 </body>
 </html>
