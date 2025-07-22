@@ -20,6 +20,7 @@
     <nav>
         <h2 class="logo">localix</h2>
         <ul>
+            <li><a href="../explore/explore.html">Explore</a></li>
             <li><a href="./search/search.html">Search</a></li>
             <li class="signin"><a href="./signIn/signIn.html">Sign In</a></li>
             <li class="getstarted"><a href="../getStarted/signup.html">Get Started</a></li>
@@ -66,7 +67,7 @@
         <div class="box">
             <h1>Ready to Grow Your Business</h1>
             <p>Join thousands of small businesses already using Localix to increase their visibility</p>
-            <a href="index.html">Get Started Now</a>
+            <a href="./getStarted/signup.html">Get Started Now</a>
             <p class="trial">No credit card required • 14-day free trial</p>
         </div>
     </section>
@@ -74,5 +75,12 @@
         <p><span>Localix</span> &copy; 2024. Empowering small businesses.</p>
     </footer>
     <script src="script.js"></script>
+    <script>
+document.querySelector('button[type="submit"]').onclick = function(e) {
+    e.preventDefault();
+    // Here you would normally validate credentials
+    window.location.href = "../dashboard/dash.html";
+};
+</script>
 </body>
 </html>
