@@ -123,3 +123,6 @@ input {
     height: 20px;
     vertical-align: middle;
 }
+@media screen and (max-width:450px){
+    
+}

@@ -65,6 +65,7 @@ body {
 }
 .box p{
     color: #2e2e2e;
+    text-align: center;
 }
 .box button{
     color: #fff;
@@ -83,4 +84,12 @@ body {
 }
 .box a:hover{
     text-decoration: underline;
+}
+@media screen and (max-width: 550px){
+    .box{
+        padding: 50px 20px;
+    }
+    .box p{
+        width: 300px;
+    }
 }
