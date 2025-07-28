@@ -20,3 +20,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+const demoButton = document.querySelector('.demo');
+const demoSection = document.querySelector('.demosection');
+const closeButton = demoSection.querySelector('button');
+demoButton.addEventListener('click', () => {
+    demoSection.style.display = 'flex';
+});
+closeButton.addEventListener('click', () => {
+    demoSection.style.display = 'none';
+    const video = demoSection.querySelector('video');
+    if (video) {
+        video.pause();
+        video.currentTime = 0;
+    }
+});
