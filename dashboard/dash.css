@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+::-moz-selection { /* Code for Firefox */
+    color: #fff;
+    background: #000;
+}
+
+::selection {
+    color: #fff;
+    background: #000;
+}
+nav{
+    position: relative;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 50px 80px;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 2;
+    border-bottom: 1px solid #dfdfdf;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+}
+nav ul a{
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #000;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+nav ul a:hover{
+    background-color: #dfdfdf;
+}
+nav .logo {
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 600;
+    color: #000;
+}
+nav .first{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+nav .first button{
+    background: none;
+    border: none;
+    color: #000;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 20px;
+}
+nav ul .noti{
+    position: relative;
+    font-size: 20px;
+    cursor: pointer;
+}
+nav ul .profile{
+    position: relative;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dfdfdf;
+    font-size: 15px;
+    color: #676767;
+}
+.sidebar{
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-100%);
+    visibility: hidden;
+    transition: transform 0.3s ease, visibility 0.3s ease;
+}
+
+.sidebar.open {
+    transform: translateX(0);
+    visibility: visible;
+}
+.sidebar .close{
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+.sidebar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar ul li{
+    margin: 40px 0;
+}
+.sidebar ul  li div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    color: #444444;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.sidebar ul li div.selected{
+    background-color:#F1F2F5 ;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: #000;
+}
+.sidebar .profile i{
+    position: relative;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dfdfdf;
+    font-size: 15px;
+    color: #676767;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+.content .head{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.content .head button{
+    background-color: #4c704c;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.content .head button i{
+    margin-right: 10px;
+}
+.content .head button:hover{
+    background-color: #3a5a3a;
+}
+.projects{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+    padding: 30px 0;
+}
+.pcard{
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    text-align: center;
+    cursor: pointer;
+}
+.pcard .pimg{
+    width: 100%;
+
+}
+.pcard img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
